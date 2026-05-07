@@ -1,7 +1,8 @@
 # Agent Verifier MCP
 
-Spending limits for AI agents. One config change.
+Spending limits for AI agents. Two ways to connect:
 
+**Option A: Local (npx)**
 ```json
 {
   "mcpServers": {
@@ -9,6 +10,19 @@ Spending limits for AI agents. One config change.
       "command": "npx",
       "args": ["@goodmeta/agent-verifier-mcp"],
       "env": { "VERIFIER_API_KEY": "gm_..." }
+    }
+  }
+}
+```
+
+**Option B: Remote (no install)**
+```json
+{
+  "mcpServers": {
+    "budget": {
+      "type": "streamable-http",
+      "url": "https://verifier.goodmeta.co/mcp",
+      "headers": { "Authorization": "Bearer gm_..." }
     }
   }
 }

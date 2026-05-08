@@ -1,6 +1,6 @@
 # Agent Verifier MCP
 
-Spending limits for AI agents. Two ways to connect:
+MCP server implementing the [Budget Authority Protocol](https://github.com/goodmeta/agent-payments-landscape/blob/main/specs/budget-authority-protocol.md). Spending limits for AI agents. Two ways to connect:
 
 **Option A: Local (npx)**
 ```json

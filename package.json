@@ -8,19 +8,28 @@
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [
-    "mcp", "agent-verifier", "budget", "spending-limits",
-    "ai-agent", "x402", "agent-payments", "guardrails"
+    "mcp",
+    "agent-verifier",
+    "budget",
+    "spending-limits",
+    "ai-agent",
+    "x402",
+    "agent-payments",
+    "guardrails"
   ],
   "devDependencies": {
     "@types/node": "22.19.17",
-    "tsx": "4.19.0",
+    "tsx": "^4.21.0",
     "typescript": "6.0.3"
   },
   "dependencies": {

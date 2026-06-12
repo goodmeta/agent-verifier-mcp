@@ -41,7 +41,10 @@ The agent calls `create_budget`, `check_budget` before each payment, and `settle
 | `create_budget` | Set a spending limit ($10, 24 hours) |
 | `check_budget` | Check if a purchase is allowed (places a hold) |
 | `settle` | Confirm hold after payment, or release if payment failed |
+| `release` | Return a pre-commit hold to the budget (cancel before it settles) |
+| `refund` | Reverse a settled payment, fully or partially |
 | `get_budget` | Query remaining budget and history |
+| `query_reservation` | Look up a single hold's state (held, settled, released, refunded) |
 
 ## How it works
 

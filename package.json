@@ -1,7 +1,7 @@
 {
   "name": "@goodmeta/agent-verifier-mcp",
-  "version": "0.1.0",
-  "description": "MCP server for AI agent spending limits. Create budgets, enforce limits, track spend across services.",
+  "version": "0.2.0",
+  "description": "MCP server for AI agent spending limits. Create budgets, enforce limits, track spend across services, plus release/refund and reservation lookup.",
   "type": "module",
   "bin": {
     "agent-verifier-mcp": "dist/index.js"
@@ -33,6 +33,7 @@
     "typescript": "6.0.3"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "1.29.0"
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "zod": "4.4.3"
   }
 }

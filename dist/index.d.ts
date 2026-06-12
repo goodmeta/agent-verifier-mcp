@@ -2,22 +2,24 @@
 /**
  * Agent Verifier MCP Server
  *
- * Spending limits for AI agents. Create budgets, enforce limits,
- * track spend across services.
+ * Spending limits for AI agents. Create budgets, enforce limits, and track
+ * spend across services — a thin stdio client over the hosted Verifier API
+ * (verifier.goodmeta.co). Mirrors the hosted /mcp tool set.
  *
  * Tools:
- *   create_budget     — set a spending limit
- *   check_budget      — check if a spend is allowed (places hold)
- *   settle            — confirm or release a hold after payment
- *   get_budget        — query remaining budget
- *   list_transactions — view spending history
+ *   create_budget      — set a spending limit
+ *   check_budget       — check if a spend is allowed (places a hold)
+ *   settle             — confirm or release a hold after payment
+ *   release            — return a pre-commit hold to the budget (before settle)
+ *   refund             — reverse a settled payment, fully or partially
+ *   get_budget         — query remaining budget + recent spend
+ *   query_reservation  — look up a single hold's state
  *
  * Works with any payment method (x402, cards, MPP, bank transfers).
  * The verifier tracks the budget — the payment rail doesn't matter.
  *
  * Usage:
  *   npx @goodmeta/agent-verifier-mcp          # stdio (Claude Code)
- *   npx @goodmeta/agent-verifier-mcp --http   # HTTP transport
  *
  * Claude Code config:
  *   {

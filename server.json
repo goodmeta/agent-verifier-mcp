@@ -18,7 +18,7 @@
       "environmentVariables": [
         {
           "name": "VERIFIER_API_KEY",
-          "description": "API key for the verifier service. Get one free at verifier.goodmeta.co/setup/merchants",
+          "description": "API key for the verifier service. Issued by the operator: eric@goodmeta.co. Discovery (initialize, tools/list) needs no key.",
           "isRequired": true,
           "isSecret": true,
           "format": "string"

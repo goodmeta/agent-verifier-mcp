@@ -64,15 +64,16 @@ Budget enforcement is rail-agnostic. Works with x402, credit cards, MPP, bank tr
 
 ## Setup
 
-Get a free API key:
+Discovery is open: `initialize` and `tools/list` on
+`https://verifier.goodmeta.co/mcp` work with no credentials, so directory
+health checks and "what does this server do" work for anyone.
 
-```bash
-curl -X POST https://verifier.goodmeta.co/setup/merchants \
-  -H "Content-Type: application/json" \
-  -d '{"names":["My Agent"]}'
-```
+Budget tools (`create_budget` and friends) need an API key. Keys are
+issued by the operator — email eric@goodmeta.co for one; tell us the agent
+name and expected budget scale.
 
-Add the key to your MCP config. Done.
+Add the key to your MCP config (`VERIFIER_API_KEY` for npx, the
+`Authorization: Bearer` header for remote). Done.
 
 ## Works with
 
